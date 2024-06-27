@@ -1,0 +1,187 @@
+:root {
+    --font-color-light: #ffffff;
+    --font-color-dark: #081a40;
+    --gradient-start: #93ddff;
+    --gradient-end: #4de7ff;
+    --box-shadow: 2px 2px 7px rgba(64, 64, 64, 1);
+    --text-shadow: 2px 2px 6px rgba(64, 64, 64, 0.6);
+}
+  
+.gradient-bg {
+    position: absolute;
+    top: 65rem;
+    right: -35rem;
+    width: 300vw;
+    height: 70vh;
+    background: linear-gradient(to bottom right, var(--gradient-start), var(--gradient-end));
+    z-index: -1;
+    border-radius: 50%;
+    filter: blur(300px);
+    overflow-x: hidden;
+}
+  
+body {
+    font-family: "Inter", sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: var(--font-color-dark);
+    overflow-x: hidden;
+}
+  
+.display-pic {
+    margin-top: 3rem;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--font-color-dark);
+    filter: drop-shadow(var(--box-shadow));
+}
+  
+.personal-info {
+    margin-bottom: 2rem;
+    letter-spacing: -0.08rem;
+}
+  
+.personal-info--name {
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 1.6rem;
+    margin-bottom: -0.2rem;
+    text-shadow: var(--text-shadow);
+    padding: 3px;
+}
+  
+.personal-info--title,
+.personal-info--company {
+    font-weight: 500;
+    font-size: 17px;
+    margin: 0.06rem auto 0 auto;
+    padding: 3px;
+}
+  
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+  
+.social-media a {
+    margin: -15px 15px;
+}
+  
+.social-media img {
+    width: 35px;
+    height: 35px;
+}
+  
+.about-me,
+.education,
+.skills {
+    text-align: left;
+    padding: 10px 8vw 0 8vw;
+    width: 84vw;
+    position: relative;
+}
+
+.about-me::after {
+    margin-left: 8vw;
+    margin-top: -50px;
+    left: 0;
+    top: 6.2rem;
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 3px;
+    background-color: #010438;
+    border-radius: 2px;
+}
+
+.education::after {
+    margin-left: 8vw;
+    margin-top: -50px;
+    left: 0;
+    top: 6.2rem;
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 3.1px;
+    background-color: #010438;
+    border-radius: 2px;
+}
+
+.skills::after {
+    margin-left: 8vw;
+    margin-top: -50px;
+    left: 0;
+    top: 6.2rem;
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 3px;
+    background-color: #010438;
+    border-radius: 2px;
+}
+  
+.about-me h2,
+.education h2,
+.skills h2 {
+    padding-top: 0.8rem;
+    margin-bottom: 0rem;
+}
+
+.about-me--p {
+    padding-top: 8px;
+}
+  
+.education--h3 {
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 8px;
+}
+  
+.education--h5 {
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 0rem;
+    font-style: italic;
+}
+  
+.skills > ul {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 12px;
+}
+  
+.skills li {
+    list-style-type: none;
+    padding: 5px;
+    border: 2px solid var(--font-color-dark);
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 14px;
+}
+  
+.photos {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+}
+  
+.photos > img {
+    width: calc(((100vw) - 15px) / 4 + 20px);
+    height: calc(((100vw) - 15px) / 4 + 20px);
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+  
+.photos > .img {
+    padding-right: 5px;
+}
+  
+#last-image {
+    padding-right: 0;
+}
